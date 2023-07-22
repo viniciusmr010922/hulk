@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {}
+
+body {
+    height: 98vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/principal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 1700px;
+    height: 760px;
+    color: #fafafa;
+    text-shadow: 0px 0px 15px #000000;
+    z-index: 1;
+}
+
+header {
+    width: 98%;
+    height: 100px;
+}
+
+header nav {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}
+
+header nav img {
+    width: 200px;
+}
+
+header nav ul {
+    width: 850px;
+    height: 100px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 50px;
+}
+
+header nav ul li {
+    list-style-type: none;
+    width: fit-content;
+}
+
+header ul li a:visited,
+header ul li a:link {
+    color: #fafafa;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+    transition: 0.5s;
+}
+
+header ul li a:hover {
+    color: green;
+    transition: 0.5s;
+}
+
+main {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .contents {
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .contents h1 {
+    width: 100%;
+    font-size: 70px;
+    text-shadow: 0px 0px 15px #000000;
+    height: 80px;
+    margin-top: 80px;
+}
+
+main .contents p {
+    margin: 15px;
+    padding-bottom: 0px;
+}
+
+main .contents .mobile {
+    display: none;
+}
+
+button {
+    font-family: sans-serif;
+    font-size: 25px;
+    background-color: red;
+    transition: 0.5s ease-in-out;
+    margin-top: 15px;
+    padding: 5px;
+    width: 200px;
+    height: 60px;
+    color: #fafafa;
+    border-radius: 15px;
+}
+
+button:hover {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+main .contents button:visited,
+main .contents button:link {
+    height: 200px;
+    width: 50px;
+    background-color: red;
+    color: black;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+}
+
+main .contents button:hover {
+    background-color: green;
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nevoa {
+    height: 450px;
+    width: 100%;
+    background-image: url(../assets/nevoa.webp);
+    position: fixed;
+    bottom: 0px;
+    animation: hulk;
+    animation-duration: 95s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 0;
+}
+
+@keyframes hulk {
+    from {
+        background-position: right;
+    }
+    to {
+        background-position: left;
+    }
+}
+
+.nevoa2 {
+    height: 450px;
+    width: 100%;
+    background-image: url(../assets/nevoa.webp);
+    position: fixed;
+    bottom: 0px;
+    animation: hulk;
+    animation-duration: 95s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 0;
+}
+
+@keyframes hulk2 {
+    from {
+        background-position: left;
+    }
+    to {
+        background-position: right;
+    }
+}
+
+
+/* tablet version */
+
+@media (max-width: 1024px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-position: center;
+    }
+    .container {
+        width: 1024px;
+        height: 870px;
+        color: #fafafa;
+        text-shadow: 0px 0px 15px #000000;
+        z-index: 1;
+    }
+    main .contents {
+        margin: 100px;
+        width: 830px;
+        height: 300px;
+    }
+    main {
+        height: 700px;
+    }
+    main .contents p.no-mobile {
+        display: none;
+    }
+    main .contents p.mobile {
+        display: block;
+    }
+    .nevoa {
+        height: 480px;
+        width: 100%;
+        background-image: url(../assets/nevoa.webp);
+        position: fixed;
+        bottom: 0px;
+        animation: hulk;
+        animation-duration: 95s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        z-index: 0;
+    }
+    @keyframes hulk {
+        from {
+            background-position: right;
+        }
+        to {
+            background-position: left;
+        }
+    }
+    .nevoa2 {
+        height: 480px;
+        width: 100%;
+        background-image: url(../assets/nevoa2.webp);
+        position: fixed;
+        bottom: 0px;
+        animation: hulk2;
+        animation-duration: 95s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        z-index: 0;
+    }
+    @keyframes hulk2 {
+        from {
+            background-position: right;
+        }
+        to {
+            background-position: left;
+        }
+    }
+}
+
+
+/* mobile version */
+
+@media(max-width:425px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-image: url(../assets/principal.png);
+        background-position: center;
+    }
+    main .contents h1 {
+        margin-top: 70px;
+        font-size: 44px;
+    }
+    main .contents p.no-mobile {
+        display: none;
+    }
+    main .contents .mobile {
+        display: block;
+        margin-top: 10px;
+    }
+    .contents button {
+        align-self: center;
+        margin-bottom: 150px;
+    }
+    footer {
+        width: 100%;
+        height: 30px;
+        padding-top: 15px;
+        font-size: 13px;
+        padding: 0;
+        margin: 0;
+    }
+    .container {
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+    }
+    main .contents {
+        width: 300;
+        height: 300px;
+    }
+    main {
+        height: 400px;
+    }
+    header nav ul {
+        display: none;
+    }
+    header nav img {
+        width: 150px;
+    }
+}
